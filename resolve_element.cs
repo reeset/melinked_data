@@ -278,6 +278,7 @@ namespace melinked_data
                         }
                     case LinkResolverService.OCLC_VIAF:
                         {
+                            
                             if (search_index == String.Empty)
                             {
                                 tmp = search_uri_string.Replace("{search_terms}", System.Uri.EscapeDataString(term)).Replace("{max_terms}", "20").Replace("{source_terms}", "");
@@ -287,7 +288,9 @@ namespace melinked_data
                                 tmp = search_uri_string.Replace("{search_terms}", System.Uri.EscapeDataString(term)).Replace("{max_terms}", "20").Replace("{source_terms}", "+and+local.sources+any+%22" + search_index + "%22");
                                 //+and+local.sources+any+%22lc%22
                             }
+                            
                             tmp = ReadUri(tmp);
+                            //System.Windows.Forms.MessageBox.Show(tmp);
                             tmp = getLinks(tmp, RSS_TYPES.rss, term);
                             break;
                         }
@@ -939,7 +942,7 @@ namespace melinked_data
             return tmpterm;
         }
 
-        public string NormalizeNameEx(string term, string subfields)
+        public string NormalizeNameEx(string term, string subfields, bool bPersonal = true)
         {
 
             //Valid are $a,$b,$c$d$q
@@ -959,7 +962,16 @@ namespace melinked_data
                             {
                                 if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, @"[A-Z]\.$") == false)
                                 {
-                                    tmpterm = tmpterm.TrimEnd(".".ToCharArray());
+                                    if (bPersonal == false)
+                                    {
+                                        //I need to come up with something a bit more refined -- maybe something like:
+                                        if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, @", \w{1,3}.$") == false)
+                                            tmpterm = tmpterm.TrimEnd(".".ToCharArray());
+                                    } else
+                                    {
+                                        tmpterm = tmpterm.TrimEnd(".".ToCharArray());
+                                    }
+                                    //tmpterm = tmpterm.TrimEnd(".".ToCharArray());
                                 }
                             }
                             //if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, "[A-Z]$"))
@@ -991,7 +1003,14 @@ namespace melinked_data
                     }
                     else
                     {
-                        tmpterm = tmpterm.TrimEnd(".,;: ".ToCharArray());
+                        //I need to come up with something a bit more refined -- maybe something like:
+                        if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, @", \w{1,3}.$") == false)
+                        {
+                            tmpterm = tmpterm.TrimEnd(".,;: ".ToCharArray());
+                        } else
+                        {
+                            tmpterm = tmpterm.TrimEnd(",;: ".ToCharArray());
+                        }
                     }
                 }
             }
@@ -1000,7 +1019,7 @@ namespace melinked_data
             return tmpterm;
         }
 
-        public string NormalizeName(string term)
+        public string NormalizeName(string term, bool bPersonal = true)
         {
 
             //Valid are $a,$b,$c$d$q
@@ -1020,7 +1039,15 @@ namespace melinked_data
                             {
                                 if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, @"[A-Z]\.$") == false)
                                 {
-                                    tmpterm = tmpterm.TrimEnd(".".ToCharArray());
+                                    if (bPersonal == false)
+                                    {
+                                        //I need to come up with something a bit more refined -- maybe something like:
+                                        if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, @", \w{1,4}.$") == false)
+                                            tmpterm = tmpterm.TrimEnd(".".ToCharArray());
+                                    } else
+                                    {
+                                        tmpterm = tmpterm.TrimEnd(".".ToCharArray());
+                                    }
                                 }
                             }
                             //if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, "[A-Z]$"))
@@ -1052,7 +1079,14 @@ namespace melinked_data
                     if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, @"[A-Z]\.$")){ 
                         tmpterm = tmpterm.TrimEnd(", ".ToCharArray());
                     } else {
-                        tmpterm = tmpterm.TrimEnd("., ".ToCharArray());
+                        if (System.Text.RegularExpressions.Regex.IsMatch(tmpterm, @", \w{1,3}.$") == false)
+                        {
+                            tmpterm = tmpterm.TrimEnd("., ".ToCharArray());
+                        }
+                        else
+                        {
+                            tmpterm = tmpterm.TrimEnd(", ".ToCharArray());
+                        }
                     }
                 }
             }

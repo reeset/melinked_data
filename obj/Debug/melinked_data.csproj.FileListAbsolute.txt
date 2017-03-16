@@ -15,3 +15,10 @@ C:\Users\reese.2179\OneDrive\Symlinked marcedit\net_marcedit\C#\MProgram\MarcEdi
 C:\Users\reese.2179\OneDrive\Symlinked marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\bin\Debug\melinked_data.dll.config
 C:\Users\reese.2179\OneDrive\Symlinked marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\bin\Debug\dotNetRDF.pdb
 C:\Users\reese.2179\OneDrive\Symlinked marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\obj\Debug\melinked_data.csprojResolveAssemblyReference.cache
+C:\Users\reese\OneDrive\Symlinked_marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\bin\Debug\melinked_data.dll.config
+C:\Users\reese\OneDrive\Symlinked_marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\bin\Debug\melinked_data.dll
+C:\Users\reese\OneDrive\Symlinked_marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\bin\Debug\melinked_data.pdb
+C:\Users\reese\OneDrive\Symlinked_marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\reese\OneDrive\Symlinked_marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\reese\OneDrive\Symlinked_marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\obj\Debug\melinked_data.dll
+C:\Users\reese\OneDrive\Symlinked_marcedit\net_marcedit\C#\MProgram\MarcEdit\Components\melinked_data\obj\Debug\melinked_data.pdb

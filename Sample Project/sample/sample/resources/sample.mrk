@@ -8,6 +8,7 @@
 =019  \\$a926979373
 =020  \\$a9789860450590$q(set :$qhardback)
 =020  \\$a9860450595$q(set :$qhardback)
+=022  \\$a1108-927X
 =035  \\$a(OCoLC)920616762$z(OCoLC)926979373
 =042  \\$alccopycat
 =043  \\$aa-cc---$aa-ch---
@@ -39,6 +40,8 @@
 =700  1\$6880-07$aChen, Shiju,$eeditor.
 =700  1\$6880-08$aCai, Shengqi,$eeditor.
 =830  \0$6880-09$aMinguo shi liao cong shu.
+=856  40$3Part 1$uhttp://elibrary.jcu.edu.au/login?url=http://www.aspresolver.com/aspresolver.asp?ANTH;1879442
+=856  40$3Part 2$uhttp://elibrary.jcu.edu.au/login?url=http://www.aspresolver.com/aspresolver.asp?ANTH;1879452
 =880  1\$6100-01$a胡宗南,$d1896-1962,$eauthor.
 =880  10$6245-02$a胡宗南先生日記 =$bHu Tsung-nan's diaries /$c胡宗南著 ; 編輯校訂陳世局, 蔡盛琦.
 =880  \\$6250-03$a初版.
@@ -51,3 +54,6 @@
 =880  \0$6830-09$a民國史料叢書.
 =938  \\$aBeijing Zhenben Technology Co. Ltd.$bBCBT$nbcbtc20150907012
 =994  \\$aC0$bWAU
+
+
+
